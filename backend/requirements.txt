@@ -1,0 +1,60 @@
+# A股智能分析平台 - 后端依赖
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+pydantic==2.9.0
+pydantic-settings==2.5.0
+python-dotenv==1.0.1
+
+# 数据处理
+pandas>=2.0.0
+numpy>=1.24.0
+
+# HTTP客户端
+requests>=2.31.0
+httpx>=0.27.0
+aiohttp>=3.9.0
+
+# SSE流式推送
+sse-starlette>=1.8.0
+
+# 缓存
+redis>=5.0.0
+
+# 机器学习（ML选股需要）
+lightgbm>=4.0.0
+xgboost>=2.0.0
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# 数据可视化
+matplotlib>=3.7.0
+plotly>=5.17.0
+mplfinance>=0.12.0
+
+# Excel处理
+openpyxl>=3.1.0
+
+# 通达信数据源
+pytdx>=1.72
+
+# AKShare — 已降级为可选兜底（仅用于低频全局数据如全球指数/期货）
+# 主要数据源已替换为直连 API：mootdx + 腾讯财经 + 东财 push2/datacenter
+# akshare>=1.12.0  # 取消注释以启用 akshare 兜底
+
+# 数据库 + 认证
+sqlalchemy>=2.0.0
+alembic>=1.13.0
+passlib[bcrypt]>=1.7.4
+python-jose[cryptography]>=3.3.0
+python-multipart>=0.0.9
+bcrypt<5.0.0
+
+# 限流
+slowapi>=0.1.9
+
+# 系统工具
+psutil>=5.9.0
+
+# 测试
+pytest>=7.4.0
+pytest-asyncio>=0.23.0

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>A股智能分析平台</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <style>
+    /* 移动端视口高度适配 */
+    :root {
+      --vh: 1vh;
+    }
+  </style>
+  <script>
+    // 设置动态视口高度变量
+    function setVH() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+    setVH()
+    window.addEventListener('resize', setVH)
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setVH)
+    }
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
